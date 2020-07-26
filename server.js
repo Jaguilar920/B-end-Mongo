@@ -49,14 +49,6 @@ app.put('/update/:id', async (req, res) => {
     res.json(await Info.update({_id: req.params.id}, req.body))
 })
 
-app.get('/show/:id', async (req, res) => {
-    res.json(await Info.findById(req.params.id))
-})
-
-app.put('/update/:id', async (req, res) => {
-    res.json(await Info.update({_id: req.params.id}, req.body))
-})
-
 app.delete('/delete/:id', async (req, res) => {
     res.json(await Info.findByIdAndDelete(req.params.id))
 })
